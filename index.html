@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Allocation Predictor</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        h1 {
+            color: #4CAF50;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        form {
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #555;
+            font-weight: bold;
+        }
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .result {
+            margin-top: 25px;
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+        .result h2 {
+            color: #4CAF50;
+            margin-bottom: 16px;
+        }
+        .result p {
+            margin: 10px 0;
+            color: #555;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Portfolio Allocation Predictor</h1>
+    <form method="POST">
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" required>
+
+        <label for="income">Income:</label>
+        <input type="number" id="income" name="income" required>
+
+        <label for="risk_tolerance">Risk Tolerance:</label>
+        <select id="risk_tolerance" name="risk_tolerance" required>
+            <option value="Low">Low</option>
+            <option value="Medium">Medium</option>
+            <option value="High">High</option>
+        </select>
+
+        <label for="literacy_rate">Literacy Rate (%):</label>
+        <input type="number" id="literacy_rate" name="literacy_rate" step="0.01" min="0.5" max="1.0" required>
+
+        <label for="investment_goal">Investment Goal:</label>
+        <select id="investment_goal" name="investment_goal" required>
+            <option value="Retirement">Retirement</option>
+            <option value="Wealth Accumulation">Wealth Accumulation</option>
+            <option value="Education">Education</option>
+            <option value="Home Purchase">Home Purchase</option>
+        </select>
+
+        <label for="stock_trend">Stock Trend:</label>
+        <input type="number" id="stock_trend" name="stock_trend" step="0.01" required>
+
+        <label for="bond_trend">Bond Trend:</label>
+        <input type="number" id="bond_trend" name="bond_trend" step="0.01" required>
+
+        <label for="gold_trend">Gold Trend:</label>
+        <input type="number" id="gold_trend" name="gold_trend" step="0.01" required>
+
+        <label for="crypto_trend">Crypto Trend:</label>
+        <input type="number" id="crypto_trend" name="crypto_trend" step="0.01" required>
+
+        <button type="submit">Predict Allocation</button>
+    </form>
+
+    {% if result %}
+    <div class="result">
+        <h2>Recommended Portfolio Allocation:</h2>
+        <p>Stocks: {{ result.Stocks }}</p>
+        <p>Bonds: {{ result.Bonds }}</p>
+        <p>Gold: {{ result.Gold }}</p>
+        <p>Crypto: {{ result.Crypto }}</p>
+    </div>
+    {% endif %}
+</body>
+</html>

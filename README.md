@@ -58,9 +58,9 @@ Investment-Advisor/ ( MAIN FOLDER)
    
 ---
 ## Dependencies
-Python 3.8+
+### Python 3.8+
 
-Libraries:
+## Libraries:
 
 numpy
 

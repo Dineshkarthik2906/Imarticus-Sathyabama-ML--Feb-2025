@@ -55,6 +55,7 @@ Investment-Advisor/ ( MAIN FOLDER)
 └── templates/              ( SUB FOLDER INSIDE MAIN FOLDER)
 
    ├── index.html          # Input form
+   
 ---
 ## Dependencies
 Python 3.8+

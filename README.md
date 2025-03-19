@@ -26,7 +26,7 @@ python app.py
 ---
 ## Metrics
 
-Training Set:
+### Training Set:
 
 MAE: 3.64
 
@@ -34,7 +34,7 @@ MSE: 20.87
 
 R²: 0.57
 
-Test Set:
+### Test Set:
 
 MAE: 3.71
 

@@ -4,13 +4,13 @@
  An AI-driven tool to predict portfolio allocations using XGBoost. It uses real-world market data and synthetic user profiles for training.
 
 ## Features
-Fetches market data (S&P 500, Bonds, Gold, Bitcoin) via Yahoo Finance.
+#Fetches market data (S&P 500, Bonds, Gold, Bitcoin) via Yahoo Finance.
 
-Generates synthetic user profiles with risk-based allocations.
+#Generates synthetic user profiles with risk-based allocations.
 
-Trains an XGBoost model with GridSearchCV for hyperparameter tuning.
+#Trains an XGBoost model with GridSearchCV for hyperparameter tuning.
 
-Predicts portfolio allocations (Stocks, Bonds, Gold, Crypto).
+#Predicts portfolio allocations (Stocks, Bonds, Gold, Crypto).
 
 ---
 ## Installation and Running the Project
@@ -24,7 +24,7 @@ python train_model.py
 python app.py
 
 ---
-## 
+## Metrics
 
 Training Set:
 
